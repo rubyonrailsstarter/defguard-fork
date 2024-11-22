@@ -1518,7 +1518,8 @@ const en: BaseTranslation = {
       helpers: {
         address:
           'Based on this address VPN network address will be defined, eg. 10.10.10.1/24 (and VPN network will be: 10.10.10.0/24)',
-        gateway: 'Gateway public address, used by VPN users to connect',
+        gateway:
+          'Gateway public address. This value will be shared with clients and indicates where they should connect to. Can be a single IPv4 address, a single IPv6 address or a domain name. To support both IPv4 and IPv6 you should use a domain that has both IPv4 and IPv6 records.',
         dns: 'Specify the DNS resolvers to query when the wireguard interface is up.',
         allowedIps:
           'List of addresses/masks that should be routed through the VPN network.',

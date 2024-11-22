@@ -3620,7 +3620,7 @@ type RootTranslation = {
 				 */
 				address: string
 				/**
-				 * G​a​t​e​w​a​y​ ​p​u​b​l​i​c​ ​a​d​d​r​e​s​s​,​ ​u​s​e​d​ ​b​y​ ​V​P​N​ ​u​s​e​r​s​ ​t​o​ ​c​o​n​n​e​c​t
+				 * G​a​t​e​w​a​y​ ​p​u​b​l​i​c​ ​a​d​d​r​e​s​s​.​ ​T​h​i​s​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​s​h​a​r​e​d​ ​w​i​t​h​ ​c​l​i​e​n​t​s​ ​a​n​d​ ​i​n​d​i​c​a​t​e​s​ ​w​h​e​r​e​ ​t​h​e​y​ ​s​h​o​u​l​d​ ​c​o​n​n​e​c​t​ ​t​o​.​ ​C​a​n​ ​b​e​ ​a​ ​s​i​n​g​l​e​ ​I​P​v​4​ ​a​d​d​r​e​s​s​,​ ​a​ ​s​i​n​g​l​e​ ​I​P​v​6​ ​a​d​d​r​e​s​s​ ​o​r​ ​a​ ​d​o​m​a​i​n​ ​n​a​m​e​.​ ​T​o​ ​s​u​p​p​o​r​t​ ​b​o​t​h​ ​I​P​v​4​ ​a​n​d​ ​I​P​v​6​ ​y​o​u​ ​s​h​o​u​l​d​ ​u​s​e​ ​a​ ​d​o​m​a​i​n​ ​t​h​a​t​ ​h​a​s​ ​b​o​t​h​ ​I​P​v​4​ ​a​n​d​ ​I​P​v​6​ ​r​e​c​o​r​d​s​.
 				 */
 				gateway: string
 				/**
@@ -7885,7 +7885,7 @@ export type TranslationFunctions = {
 				 */
 				address: () => LocalizedString
 				/**
-				 * Gateway public address, used by VPN users to connect
+				 * Gateway public address. This value will be shared with clients and indicates where they should connect to. Can be a single IPv4 address, a single IPv6 address or a domain name. To support both IPv4 and IPv6 you should use a domain that has both IPv4 and IPv6 records.
 				 */
 				gateway: () => LocalizedString
 				/**

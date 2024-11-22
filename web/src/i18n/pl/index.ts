@@ -1507,7 +1507,7 @@ Uwaga, podane tutaj konfiguracje nie posiadają klucza prywatnego. Musisz uzupe�
         address:
           'Od tego adresu będzie stworzona sieć VPN, np. 10.10.10.1/24 (sieć VPN będzie: 10.10.10.0/24)',
         gateway:
-          'Adres publiczny Gatewaya, używany przez użytkowników VPN do łączenia się.',
+          'Adres publiczny Gatewaya. Wartość ta jest dostępna dla wszystkich klientów i wskazuje im gdzie powinni się połączyć. Może to być pojedynczy adres IPv4, pojedynczy adres IPv6 lub nazwa domeny. Aby obsługiwać zarówno IPv4 i IPv6, należy użyć domeny ze skonfigurowanymi rekordami IPv4 i IPv6.',
         dns: 'Określ resolwery DNS, które mają odpytywać, gdy interfejs WireGuard jest aktywny.',
         allowedIps: 'Lista adresów/masek, które powinny być routowane przez sieć VPN.',
         allowedGroups:
