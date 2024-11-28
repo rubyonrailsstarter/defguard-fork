@@ -65,7 +65,7 @@ pub async fn run_periodic_count_update(pool: &PgPool) -> Result<(), SqlxError> {
 
 impl Counts {
     pub(crate) fn is_over_limit(&self) -> bool {
-        self.user > 5 || self.device > 10 || self.wireguard_network > 1
+        self.user > 999999 || self.device > 999999 || self.wireguard_network > 999999
     }
 }
 
