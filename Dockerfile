@@ -36,7 +36,7 @@ COPY user_agent_header_regexes.yaml /build/user_agent_header_regexes.yaml
 RUN apt-get update && apt-get -y install protobuf-compiler libprotobuf-dev
 COPY Cargo.toml Cargo.lock build.rs ./
 # for vergen
-COPY .git .git
+COPY .github .github
 COPY .sqlx .sqlx
 COPY src src
 COPY templates templates
