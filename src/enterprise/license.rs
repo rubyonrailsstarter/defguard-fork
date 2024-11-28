@@ -15,7 +15,7 @@ use tokio::time::sleep;
 
 use crate::{db::Settings, server_config, VERSION};
 
-const LICENSE_SERVER_URL: &str = "https://pkgs.defguard.net/api/license/renew";
+const LICENSE_SERVER_URL: &str = "http://127.0.0.1/api/license/renew";
 
 static LICENSE: RwLock<Option<License>> = RwLock::new(None);
 
