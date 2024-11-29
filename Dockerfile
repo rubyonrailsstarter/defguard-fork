@@ -1,10 +1,10 @@
 FROM node:20-alpine as web
 
 WORKDIR /app
-COPY web/package.json web/pnpm-lock.yaml web/.npmrc .
+COPY web/package.json web/pnpm-lock.yaml web/.npmrc ./
 RUN npm i -g pnpm
 RUN pnpm install --ignore-scripts --frozen-lockfile
-COPY web/ .
+COPY web/ ./
 RUN pnpm run generate-translation-types
 RUN pnpm build
 
