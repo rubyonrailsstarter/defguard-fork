@@ -1,11 +1,17 @@
-FROM node:20-alpine AS web
+FROM node:20-slim AS web
 
 WORKDIR /app
-# Install build dependencies
-RUN apk add --no-cache python3 make g++ git
+# Install build essentials
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    python3 \
+    build-essential \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
 COPY web/package.json web/pnpm-lock.yaml web/.npmrc ./
 RUN npm i -g pnpm
-RUN pnpm install --ignore-scripts --frozen-lockfile
+RUN pnpm install --frozen-lockfile
 COPY web/ ./
 RUN pnpm run generate-translation-types
 RUN pnpm build
