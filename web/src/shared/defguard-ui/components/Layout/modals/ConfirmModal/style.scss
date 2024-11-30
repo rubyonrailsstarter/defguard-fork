@@ -1,0 +1,71 @@
+.modal {
+  &.confirm {
+    @include media-breakpoint-down(md) {
+      min-height: 100%;
+      padding: 0;
+    }
+    @include media-breakpoint-up(md) {
+      transform: translateY(221px);
+    }
+
+    .modal-content {
+      border-radius: 15px;
+      @include media-breakpoint-down(md) {
+        width: calc(100% - 40px);
+        box-sizing: border-box;
+        padding: 30px 20px 40px;
+        align-self: center;
+      }
+      @include media-breakpoint-up(md) {
+        padding: 40px 30px;
+        width: 503px;
+      }
+
+      .title {
+        margin-bottom: 30px;
+
+        @include typography(app-body-1);
+
+        color: var(--text-body-primary);
+      }
+
+      .subtitle {
+        @include typography(app-body-2);
+
+        color: var(--text-body-secondary);
+      }
+
+      .title,
+      .subtitle {
+        width: 100%;
+        text-align: center;
+        user-select: none;
+      }
+
+      .controls {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: flex-start;
+        @include media-breakpoint-down(md) {
+          row-gap: 20px;
+          flex-wrap: wrap-reverse;
+
+          button {
+            width: 100%;
+          }
+        }
+        @include media-breakpoint-up(md) {
+          column-gap: 22px;
+
+          button {
+            width: 100%;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}

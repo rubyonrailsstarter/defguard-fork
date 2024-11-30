@@ -1,0 +1,35 @@
+.avatar-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+  background-color: var(--surface-frame-bg);
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 22px;
+    height: 22px;
+
+    path {
+      fill: var(--surface-icon-primary);
+    }
+  }
+
+  &.active {
+    background-color: var(--surface-main-primary);
+
+    svg {
+      path {
+        fill: var(--surface-icon-secondary);
+      }
+    }
+  }
+}

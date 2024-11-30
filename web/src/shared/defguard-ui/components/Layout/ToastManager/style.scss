@@ -1,0 +1,12 @@
+#toasts-root {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  z-index: 5;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-end;
+  row-gap: 15px;
+}

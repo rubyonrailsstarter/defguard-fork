@@ -1,0 +1,8 @@
+@use '@scssutils' as *;
+
+.no-data {
+  @include typography(app-body-2);
+
+  color: var(--text-body-tertiary);
+  user-select: none;
+}

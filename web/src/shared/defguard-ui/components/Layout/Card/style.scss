@@ -1,0 +1,21 @@
+.card {
+  display: block;
+  border-radius: 15px;
+  background-color: var(--surface-default-modal);
+  box-sizing: border-box;
+
+  &.bordered {
+    border: 1px solid var(--border-primary);
+  }
+
+  &.shaded {
+    box-shadow: var(--box-shadow);
+  }
+
+  &.hide-appearance {
+    box-shadow: none;
+    border-radius: 0;
+    border: 0 solid transparent;
+    background-color: inherit;
+  }
+}

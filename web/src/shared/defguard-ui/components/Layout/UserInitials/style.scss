@@ -1,0 +1,23 @@
+.user-initials-box {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  border: 0 solid transparent;
+  border-radius: 10px;
+  user-select: none;
+  height: 40px;
+  width: 40px;
+  overflow: none;
+  background-color: var(--surface-main-primary);
+
+  span {
+    display: block;
+
+    @include typography(app-body-1);
+
+    color: var(--surface-icon-secondary);
+
+    font-size: 17px;
+  }
+}

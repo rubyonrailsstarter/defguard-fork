@@ -1,0 +1,108 @@
+.virtualized-list-container {
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+
+  & > .headers {
+    grid-row: 1;
+    grid-column: 1;
+    box-sizing: border-box;
+    width: calc(100% - 5px);
+    display: inline-grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: 22px;
+    margin-bottom: 6px;
+    margin-right: 5px;
+
+    & > * {
+      grid-row: 1;
+    }
+
+    & > .header {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      align-content: center;
+      justify-content: flex-start;
+      overflow: hidden;
+
+      &.clickable {
+        cursor: pointer;
+      }
+
+      & > span {
+        user-select: none;
+
+        @include typography(app-modal-1);
+
+        color: var(--text-body-tertiary);
+      }
+
+      & > .floating-header-icon {
+        height: 22px;
+        width: 22px;
+        display: none;
+        & > svg {
+          user-select: none;
+          opacity: 0;
+        }
+      }
+
+      &.sortable {
+        & > .floating-header-icon {
+          display: block;
+        }
+      }
+
+      &.active {
+        & > span {
+          color: var(--text-body-primary);
+        }
+        & > .floating-header-icon {
+          & > svg {
+            opacity: 1;
+
+            &.asc {
+              transform: rotateZ(180deg) translateZ(0);
+            }
+
+            &.desc {
+              transform: rotateZ(0deg) translateZ(0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & > .scroll-container {
+    grid-row: 1;
+    grid-column: 1;
+    max-height: 100%;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    margin-right: 5px;
+
+    & > .rows-container {
+      box-sizing: border-box;
+
+      .default-row {
+        height: 60px;
+        background-color: var(--surface-default-modal);
+        border-radius: 15px;
+        padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  &.with-headers {
+    grid-template-rows: 28px 1fr;
+
+    & > .scroll-container {
+      grid-row: 2;
+    }
+  }
+}

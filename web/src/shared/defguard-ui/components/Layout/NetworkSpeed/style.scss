@@ -1,0 +1,47 @@
+.network-speed {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+
+  & > .speed-value {
+    font-family: 'Roboto';
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: inherit;
+
+    & > .measurement {
+      font-family: 'Roboto';
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 500;
+      color: inherit;
+
+      vertical-align: super;
+      margin-left: 0.3rem;
+      font-size: 75%;
+    }
+  }
+
+  &.upload {
+    & > .speed-value {
+      color: var(--text-alert);
+
+      & > .measurement {
+        color: var(--text-alert);
+      }
+    }
+  }
+
+  &.download {
+    & > .speed-value {
+      color: var(--surface-main-primary);
+
+      & > .measurement {
+        color: var(--surface-main-primary);
+      }
+    }
+  }
+}

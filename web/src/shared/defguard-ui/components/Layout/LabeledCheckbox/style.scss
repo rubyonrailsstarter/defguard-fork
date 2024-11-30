@@ -1,0 +1,32 @@
+.labeled-checkbox {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 8px;
+  height: 18px;
+  align-items: center;
+  justify-content: flex-start;
+
+  & > .checkbox {
+    cursor: pointer;
+    order: 1;
+  }
+
+  & > label {
+    cursor: pointer;
+    order: 2;
+    display: block;
+
+    @include typography(app-modal-1);
+    color: var(--text-body-secondary);
+  }
+
+  &.disabled {
+    & > .checkbox {
+      cursor: not-allowed;
+    }
+
+    & > label {
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.toast {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  background-color: var(--surface-default-modal);
+  gap: 1rem;
+  max-width: 100%;
+  min-width: 200px;
+  min-height: 60px;
+  border: 1px solid var(--border-primary);
+  padding: 0 2rem;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.1);
+
+  .message {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    user-select: none;
+
+    @include typography(app-modal-1);
+
+    color: var(--text-body-primary);
+
+    & > span {
+      display: block;
+      text-align: left;
+      user-select: none;
+    }
+  }
+}

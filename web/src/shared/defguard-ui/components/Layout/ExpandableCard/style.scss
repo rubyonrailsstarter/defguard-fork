@@ -1,0 +1,88 @@
+.expandable-card {
+  border-radius: 15px;
+  border: 1px solid var(--border-primary);
+  background-color: var(--surface-default-modal);
+  box-sizing: border-box;
+  padding: 10px 0;
+  box-shadow: rgba(0, 0, 0, 0);
+
+  & > .top {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 0 15px 0 20px;
+
+    & > .extras {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-left: 20px;
+    }
+
+    & > .expand-button {
+      display: flex;
+      flex-flow: row;
+      column-gap: 1rem;
+      height: 40px;
+      align-items: center;
+      align-content: center;
+      justify-content: flex-start;
+      background-color: transparent;
+      border: 0 solid transparent;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      user-select: none;
+
+      & > svg {
+        path {
+          fill: var(--surface-icon-primary);
+        }
+      }
+
+      & > span {
+        @include typography(app-button-xl);
+
+        color: var(--text-body-primary);
+        display: block;
+      }
+    }
+
+    & > .actions {
+      display: inline-flex;
+      grid-auto-columns: 40px;
+      grid-template-rows: 1fr;
+      column-gap: 1rem;
+      margin-left: auto;
+      height: 40px;
+
+      & > * {
+        grid-row: 1;
+      }
+    }
+
+    &.expanded {
+      & > .top {
+        & > .expand-button {
+          & > svg {
+            path {
+              fill: var(--surface-main-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & > .expanded-content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 20px 10px;
+    border-top: 1px solid var(--border-primary);
+    margin-top: 10px;
+  }
+}

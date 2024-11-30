@@ -1,0 +1,40 @@
+.badge {
+  border-radius: 4px;
+  min-height: 14px;
+  box-sizing: border-box;
+  width: min-content;
+  white-space: nowrap;
+  user-select: none;
+  padding: 0 3px;
+  height: 14px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+
+  & > span {
+    @include typography(app-modal-3);
+    color: inherit;
+    display: block;
+  }
+
+  &.standard {
+    color: var(--text-body-secondary);
+    background-color: var(--surface-tag-modal);
+  }
+
+  &.warning {
+    color: var(--text-alert);
+    background-color: var(--surface-tag-modal);
+  }
+
+  &.success {
+    color: var(--text-button-secondary);
+    background-color: var(--surface-positive-primary);
+  }
+
+  &.primary {
+    color: var(--text-button-secondary);
+    background-color: var(--surface-main-primary);
+  }
+}

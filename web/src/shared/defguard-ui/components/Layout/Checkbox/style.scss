@@ -1,0 +1,53 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &.unchecked {
+    svg {
+      rect {
+        &:nth-child(1) {
+          fill: var(--surface-button);
+        }
+        &:nth-child(2) {
+          stroke: var(--border-primary);
+        }
+      }
+    }
+  }
+
+  &.checked {
+    svg {
+      rect {
+        &:nth-child(1) {
+          fill: var(--surface-main-primary);
+        }
+        &:nth-child(2) {
+          fill: var(--surface-button);
+        }
+      }
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

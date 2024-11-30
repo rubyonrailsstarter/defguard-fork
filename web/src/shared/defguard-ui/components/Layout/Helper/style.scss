@@ -1,0 +1,107 @@
+.helper {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  margin: 0;
+  border: 0 solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.helper-floating {
+  position: relative;
+  box-shadow: 0 6px 20px #0000001a;
+  box-sizing: border-box;
+  background-color: var(--surface-default-modal);
+  border: 1px solid var(--border-primary);
+  border-radius: 10px;
+  padding: 28px 40px;
+  min-height: 108px;
+  max-width: 411px;
+  width: 411px;
+  z-index: 1;
+
+  p,
+  span,
+  a {
+    @include typography(app-modal-1);
+  }
+
+  p,
+  span {
+    color: var(--text-body-primary);
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-color: var(--text-body-secondary);
+    color: var(--text-body-secondary);
+  }
+
+  & > .arrow {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-style: solid;
+
+    &[data-placement^='left'] {
+      border-width: 7px 0 7px 8px;
+      border-color: transparent transparent transparent var(--surface-modal-accent);
+    }
+
+    &[data-placement^='right'] {
+      border-width: 7px 8px 7px 0;
+      border-color: transparent var(--surface-modal-accent) transparent transparent;
+    }
+  }
+}
+
+.modal {
+  &.helper {
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+
+    & > .modal-content {
+      grid-row: 1;
+      grid-column: 1;
+      box-sizing: border-box;
+      padding: 30px 20px 40px;
+      border-radius: 15px;
+      display: flex;
+      flex-flow: column;
+      row-gap: 15px;
+
+      p,
+      span,
+      a {
+        text-align: center;
+        @include typography(app-modal-1);
+      }
+
+      p,
+      span {
+        color: var(--text-body-primary);
+      }
+
+      a {
+        text-decoration: underline;
+        text-decoration-color: var(--text-body-secondary);
+        color: var(--text-body-secondary);
+      }
+
+      & > .btn {
+        margin-top: 15px;
+        width: 100%;
+      }
+    }
+  }
+}

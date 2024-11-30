@@ -1,0 +1,44 @@
+.select-row {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  box-sizing: border-box;
+  padding: 0 15px;
+  column-gap: 20px;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--surface-default-modal);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 60px;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  border: 1px solid transparent;
+  transition-property: border;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in-out;
+
+  &:not(.highlight) {
+    &:hover {
+      border-color: var(--border-primary);
+    }
+  }
+
+  & > .content {
+    @include typography(app-input);
+
+    * {
+      user-select: none;
+    }
+  }
+
+  &.highlight {
+    border-color: var(--border-primary);
+
+    &.active,
+    &:hover {
+      border-color: var(--surface-main-primary);
+    }
+  }
+}

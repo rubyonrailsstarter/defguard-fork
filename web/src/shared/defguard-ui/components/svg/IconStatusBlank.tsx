@@ -1,0 +1,14 @@
+import type { SVGProps } from 'react';
+const SvgIconStatusBlank = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={16}
+    height={16}
+    fill="#899CA8"
+    viewBox="0 0 16 16"
+    {...props}
+  >
+    <circle cx={8} cy={8} r={6} />
+  </svg>
+);
+export default SvgIconStatusBlank;

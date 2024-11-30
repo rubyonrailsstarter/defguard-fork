@@ -1,0 +1,19 @@
+.radio-button {
+  border: 0 solid transparent;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}

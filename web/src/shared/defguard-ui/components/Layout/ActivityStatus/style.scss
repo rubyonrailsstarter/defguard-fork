@@ -1,0 +1,41 @@
+.activity-status {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+
+  & > .message {
+    order: 1;
+    display: block;
+
+    @include typography(app-modal-3);
+    color: inherit;
+  }
+
+  & > .activity-icon {
+    order: 2;
+  }
+
+  &.variant-success {
+    color: var(--text-positive);
+  }
+
+  &.variant-error {
+    color: var(--text-alert);
+  }
+
+  &.variant-warning {
+    color: var(--text-important);
+  }
+
+  &.reversed {
+    & > .message {
+      order: 2;
+    }
+
+    & > .activity-icon {
+      order: 1;
+    }
+  }
+}
